@@ -25,3 +25,16 @@ cl3.write(dt['petal.length'].sum())
 
 cl4.write("petal.width")
 cl4.write(dt['petal.width'].sum())
+
+st.write("ค่าเฉลี่ย")
+cl1.write("sepal.length")
+cl1.write(dt['sepal.length'].mean())
+
+cl2.write("sepal.width")
+cl2.write(dt['sepal.width'].mean())
+
+cl3.write("petal.length")
+cl3.write(dt['petal.length'].mean())
+
+cl4.write("petal.width")
+cl4.write(dt['petal.width'].mean())
