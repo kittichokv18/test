@@ -35,9 +35,6 @@ dx=[a,b,c,d]
 cx=pd.DataFrame(dx,index=["sepal.length", "sepal.width", "petal.length","petal.width"])
 st.bar_chart(cx)
 
-st.subheader("กราฟแท่ง")
-st.bar_chart(dx)
-
 st.write("ค่าเฉลี่ย")
 cl1,cl2,cl3,cl4=st.columns(4)
 cl1.write(dt['sepal.length'].mean())
