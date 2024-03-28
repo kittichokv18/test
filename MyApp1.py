@@ -26,8 +26,14 @@ cl3.write(dt['petal.length'].sum())
 cl4.write("petal.width")
 cl4.write(dt['petal.width'].sum())
 
-cols = ['sepal.length', 'sepal.width', 'petal.length']
-dx = dt[cols]
+st.write("กราฟแท่ง")
+a=dt['sepal.length'].sum()
+b=dt['sepal.width'].sum()
+c=dt['petal.length'].sum()
+d=dt['petal.width'].sum()
+dx=[a,b,c,d]
+cx=pd.DataFrame(dx,index=["sepal.length", "sepal.width", "petal.length","petal.width"])
+st.bar_chart(cx)
 
 st.subheader("กราฟแท่ง")
 st.bar_chart(dx)
