@@ -42,6 +42,15 @@ cl2.write(dt['sepal.width'].mean())
 cl3.write(dt['petal.length'].mean())
 cl4.write(dt['petal.width'].mean())
 
+st.write("Area_Chart")
+a=dt['sepal.length'].mean()
+b=dt['sepal.width'].mean()
+c=dt['petal.length'].mean()
+d=dt['petal.width'].mean()
+dxt=[a,b,c,d]
+cxx=pd.DataFrame(dxt,index=["sepal.length", "sepal.width", "petal.length","petal.width"])
+st.area_chart(cxx)
+
 st.write("ค่ามากที่สุด")
 cl1,cl2,cl3,cl4=st.columns(4)
 cl1.write(dt['sepal.length'].max())
@@ -49,9 +58,23 @@ cl2.write(dt['sepal.width'].max())
 cl3.write(dt['petal.length'].max())
 cl4.write(dt['petal.width'].max())
 
+import numpy as np
+import matplotlib.pyplot as plt
+labels = ['Sepal Length', 'Sepal Width', 'Petal Length', 'Petal Width']
+sizes = [dt['sepal.length'].max(), dt['sepal.width'].max(), dt['petal.length'].max(), dt['petal.width'].max()]
+explode = (0, 0.1,0,0) 
+fig1, ax1 = plt.subplots()
+ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
+        shadow=True, startangle=90)
+st.pyplot(fig1)
+
 st.write("ค่าน้อยที่สุด")
 cl1,cl2,cl3,cl4=st.columns(4)
 cl1.write(dt['sepal.length'].min())
 cl2.write(dt['sepal.width'].min())
 cl3.write(dt['petal.length'].min())
 cl4.write(dt['petal.width'].min())
+
+st.write("Line_Chart")
+cc=[3,8,1,10]
+st.line_chart(cc)
