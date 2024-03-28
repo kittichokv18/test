@@ -76,5 +76,5 @@ cl3.write(dt['petal.length'].min())
 cl4.write(dt['petal.width'].min())
 
 st.write("Line_Chart")
-cc=[3,8,1,10]
+cc= [dt['sepal.length'].min(), dt['sepal.width'].min(), dt['petal.length'].min(), dt['petal.width'].min()]
 st.line_chart(cc)
